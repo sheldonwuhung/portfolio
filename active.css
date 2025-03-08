@@ -28,10 +28,6 @@ div.grid1 {
     /*border: 1px dotted black;*/
 }
 
-#div.grid1Element {
-    /*border: 1px solid black;*/
-}
-
 div.main1Grid {
     grid-column: 1/4;
     grid-row: 2;
@@ -45,7 +41,8 @@ div.buttons1GridElement {
 }
 
 div.grid2 {
-
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 /*
