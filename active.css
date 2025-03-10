@@ -1,40 +1,3 @@
-.center {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.centerItem {
-    display: flex;
-    justify-content: center;
-}
-
-.round {
-    border-radius: 10%;
-}
-
-.borderTest1 {
-    border: 1px solid black;
-}
-
-.borderTest2 {
-    border: 1px solid black;
-}
-
-.text1 {
-    color: rgb(171, 194, 176);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 200%;
-    text-align: left;
-    font-weight: bold;
-}
-
-.text2 {
-    color: rgb(156,181,173);
-    font-family: monospace;
-    font-size: 120%;
-    text-align: left;
-}
-
 @media only screen and (min-width: 650px) {
     body.mainBody {
         text-align: left;
@@ -166,4 +129,36 @@ button.icon {
     height: 50px;
     background-color: rgb(119, 139, 124);
     border: none;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.round {
+    border-radius: 10%;
+}
+
+.borderTest1 {
+    border: 1px solid black;
+}
+
+.borderTest2 {
+    border: 1px solid black;
+}
+
+.text1 {
+    color: rgb(171, 194, 176);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 200%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.text2 {
+    color: rgb(156,181,173);
+    font-family: monospace;
+    font-size: 120%;
+    text-align: left;
 }
