@@ -1,9 +1,13 @@
+/*
 document.addEventListener("DOMContentLoaded", function() {
-    var button = document.getElementById("LinkedInButton");
+    const linkedinButton = document.getElementById("LinkedInButton");
+    const githubButton = document.getElementById("GithubButton");
 
     function clicked() {
-        window.open("https://www.linkedin.com/in/sheldon-hung-384334243/");
+        window.open();
     }
 
-    button.addEventListener("click", clicked);
-})
+    linkedinButton.addEventListener("click", clicked);
+    githubButton.addEventListener("click", clicked);
+
+})*/

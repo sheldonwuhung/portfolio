@@ -184,6 +184,15 @@ button.icon {
     border: none;
 }
 
+a.customLink, a:visited, a:link {
+    color: rgb(156,181,173);
+}
+
+a:hover {
+    color: rgb(65, 80, 69);
+}
+
+
 .center {
     margin-left: auto;
     margin-right: auto;
