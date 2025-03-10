@@ -62,8 +62,8 @@
     }
     div.grid2 {
         display: grid;
-        vertical-align: middle;
         grid-template-columns: 1fr 1fr 1fr;
+        gap: calc(100vw*0.01);
     }
 }
 
@@ -94,6 +94,22 @@
     }
 }
 
+@media only screen and (max-width: 939px) {
+    div.grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: calc(100vw*0.01);
+    }   
+}
+
+@media only screen and (max-width: 482px) {
+    div.grid2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: calc(100vw*0.01);
+    }   
+}
+
 /*
 .divTable {
     display: table;
@@ -116,8 +132,8 @@ div.top1Grid {
 }
 
 div.projectContainer {
-    width: 23.5vw;
-    height: 45vh;
+    width: auto;
+    height: auto;
     background-color: rgb(81, 99, 86);
     border: 1px solid rgb(119, 139, 124);
 }
