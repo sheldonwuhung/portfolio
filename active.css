@@ -173,13 +173,12 @@ div.popupContent {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20vh;
-    margin-bottom: 20vh;
+    margin-bottom: 20vh;  
 
     z-index: 3;
     width: 600px;
     height: 510px;
     background-color: rgb(65, 80, 69);
-
 }
 
 div.popupGrid {
@@ -209,13 +208,6 @@ form.popupForm  {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 10px;
-
-}
-
-input.email {
-    background-color: rgb(98, 119, 104);
-    border: 1px solid rgb(119, 139, 124);
-    width: 100%;
 }
 
 textarea.message {
@@ -223,6 +215,12 @@ textarea.message {
     border: 1px solid rgb(119, 139, 124);
     text-align: left;
     height: 100%;
+}
+
+input.email {
+    background-color: rgb(98, 119, 104);
+    border: 1px solid rgb(119, 139, 124);
+    width: 100%;
 }
 
 div.top1Grid {
