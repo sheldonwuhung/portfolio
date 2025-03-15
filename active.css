@@ -186,14 +186,14 @@ div.popupBackground {
 
 div.popupContent {
     position: relative;
-    top: 20vh;
-    bottom: 20vh;
-    left: 25vw;
-    right: 25vw;
+    top: 26.5vh;
+    bottom: 26.5vh;
+    left: 30vw;
+    right: 30vw;
 
     z-index: 3;
     width: 40vw;
-    height: 50vh;
+    height: 47.5vh;
     background-color: rgb(65, 80, 69);
 
 }
@@ -204,7 +204,7 @@ div.popupGrid {
 }
 
 div.popupGridTop {
-    padding: 10px;
+    padding: 16px;
     padding-left: 20px;
     grid-row: 1;
 }
@@ -213,6 +213,31 @@ div.popupGridClose {
     padding: 10px;
     display: flex;
     justify-content: center;
+}
+
+div.popupFormContainer {
+    grid-row: 2;
+    grid-column: 1/2;
+    padding-left: 25px;
+}
+
+form.popupForm  {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+}
+
+input.email {
+    background-color: rgb(98, 119, 104);
+    border: 1px solid rgb(119, 139, 124);
+    width: 100%;
+}
+
+textarea.message {
+    background-color: rgb(98, 119, 104);
+    border: 1px solid rgb(119, 139, 124);
+    width: 100%;
+    text-align: left;
 }
 
 div.top1Grid {
@@ -262,7 +287,16 @@ button.learnMore {
     background-color: rgb(108, 125, 112);
     border: 1px solid rgb(81, 99, 86);
     text-align: center;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+button.send {   
+    width: 175px;
+    height: 50px;
+    background-color: rgb(108, 125, 112);
+    border: 1px solid rgb(81, 99, 86);
+    text-align: center;
+    text-decoration: none;
 }
 
 button.icon {   

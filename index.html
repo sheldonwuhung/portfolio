@@ -34,7 +34,7 @@
                         <img class="fitIcon round" src="images/TopButtons/github.png" alt="GithubImage">
                     </a>
                 </button>
-                <button id="MailButton" class="icon round"> 
+                <button id="mailOpen" class="icon round"> 
                     <img class="fitIcon round" src="images/TopButtons/mail.png" alt="MailImage">
                 </button>
             </div>
@@ -135,75 +135,32 @@
 
     </div>
 
-    <div id="popupProject1" class="hide popupBackground">
+    <div id="mailSection" class="hide popupBackground">
         <div class="popupContent">
             <div class="popupGrid">
 
                 <div class="popupGridTop">
                     <div class="popupGridTopElement1">
-                        <div class="text1">Zombie Survival Game</div>
+                        <div class="text1">Contact Me (Not Working Yet)</div>
                     </div>
 
                 </div>
 
                 <div class="popupGridClose">
-                    <button id="popupCloseProject1" class="icon round">
-                        <img class="fitIcon round" src="images/TopButtons/close.png" alt="CloseButton1">
+                    <button id="mailClose" class="icon round">
+                        <img class="fitIcon round" src="images/TopButtons/close.png" alt="mailCloseButton">
                     </button>
                 </div>
 
-                <div class="popupGrid2">
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="popupProject2" class="hide popupBackground">
-        <div class="popupContent">
-            <div class="popupGrid">
-
-                <div class="popupGridTop">
-                    <div class="popupGridTopElement1">
-                        <div class="text1">Zombie Castle Defense Game</div>
-                    </div>
-
-                </div>
-
-                <div class="popupGridClose">
-                    <button id="popupCloseProject2" class="icon round">
-                        <img class="fitIcon round" src="images/TopButtons/close.png" alt="CloseButton2">
-                    </button>
-                </div>
-
-                <div class="popupGrid2">
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="popupProject3" class="hide popupBackground">
-        <div class="popupContent">
-            <div class="popupGrid">
-
-                <div class="popupGridTop">
-                    <div class="popupGridTopElement1">
-                        <div class="text1">Space Colonization Simulator</div>
-                    </div>
-
-                </div>
-
-                <div class="popupGridClose">
-                    <button id="popupCloseProject3" class="icon round">
-                        <img class="fitIcon round" src="images/TopButtons/close.png" alt="CloseButton3">
-                    </button>
-                </div>
-
-                <div class="popupGrid2">
-
+                <div class="popupFormContainer">
+                    <form class="popupForm">
+                        <label class="text2">Your email</label>
+                        <input class="email text2" type="text" placeholder="youremail@email.com" name="email" required>
+                        <label class="text2">Your message</label>
+                        <textarea class="message text2" cols="1" rows="10" placeholder="Tell me something" name="message" required></textarea>
+                        <div></div>
+                        <button id="sendEmail" class="send text2" type="button">Send message</button>
+                    </form>
                 </div>
 
             </div>
