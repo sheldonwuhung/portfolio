@@ -170,14 +170,14 @@ div.popupBackground {
 
 div.popupContent {
     position: relative;
-    top: 26.5vh;
-    bottom: 26.5vh;
-    left: 30vw;
-    right: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
 
     z-index: 3;
-    width: 40vw;
-    height: 47.5vh;
+    width: 600px;
+    height: 510px;
     background-color: rgb(65, 80, 69);
 
 }
@@ -209,6 +209,7 @@ form.popupForm  {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 10px;
+
 }
 
 input.email {
@@ -220,8 +221,8 @@ input.email {
 textarea.message {
     background-color: rgb(98, 119, 104);
     border: 1px solid rgb(119, 139, 124);
-    width: 100%;
     text-align: left;
+    height: 100%;
 }
 
 div.top1Grid {
