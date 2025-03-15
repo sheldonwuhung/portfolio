@@ -145,22 +145,6 @@
     }   
 }
 
-/*
-.divTable {
-    display: table;
-}
-
-.displayTable > div {
-    display: table-row;
-}
-
-.displayTable > div > div {
-    display: table-cell;
-    padding: 5px;
-    border: 1px solid black;
-    justify-content: end;
-}*/
-
 body {
     background-color: rgb(65, 80, 69);
     z-index: 1;
