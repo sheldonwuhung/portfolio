@@ -17,12 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
         element.classList.toggle(state)
     }
 
+    function submitEvent() {
+        togglePopup(confirmationDisplay, "show");
+        console.log('done');
+    }
+
     function hideElement(array) {
         for (let i=0; i<array.length; i++) {
             if (array[i] != null) {
                 array[i].addEventListener("click", function() {
                     togglePopup(projectDisplays[i], "show");
-                    form.reset();
                 });
             }
         }
@@ -31,11 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     hideElement(openButtons);
     hideElement(closeButtons);
 
-    form.addEventListener("submit", function() {
-        togglePopup(confirmationDisplay, "show");
-        form.reset();
-        console.log('done');
-    });
+    form.addEventListener("submit", submitEvent);
 
 });
 
