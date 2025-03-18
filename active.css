@@ -30,7 +30,7 @@
     }
     div.projectItemHeading {
         padding: 5px;
-        color: rgb(156,181,173);
+        color: rgb(212, 228, 222);
         font-family: monospace;
         font-size: 180%;
         text-align: center;
@@ -43,7 +43,7 @@
         margin-bottom: 6px;
         width: fit-content;
         height: fit-content;
-        color: rgb(156,181,173);
+        color: rgb(171, 194, 176);
         font-size: 120%;
         font-family: monospace;
     }
@@ -176,7 +176,7 @@
     }
     div.projectItemHeading {
         padding: 2px;
-        color: rgb(156,181,173);
+        color: rgb(212, 228, 222);
         font-family: monospace;
         font-size: 225%;
         text-align: center;
@@ -188,7 +188,7 @@
         padding-top: 1px;
         width: fit-content;
         height: fit-content;
-        color: rgb(156,181,173);
+        color: rgb(171, 194, 176);
         font-size: 125%;
         font-family: monospace;
     }   
@@ -336,15 +336,6 @@ button.learnMore {
     text-decoration: none;
 }
 
-input.send {   
-    width: 175px;
-    height: 50px;
-    background-color: rgb(108, 125, 112);
-    border: 1px solid rgb(81, 99, 86);
-    text-align: center;
-    text-decoration: none;
-}
-
 button.icon {   
     display: flex;
     padding: 5px; 
@@ -358,12 +349,22 @@ iframe {
     display: none;
 }
 
+input.send {   
+    width: 175px;
+    height: 50px;
+    background-color: rgb(108, 125, 112);
+    border: 1px solid rgb(81, 99, 86);
+    text-align: center;
+    text-decoration: none;
+}
+
 a.customLink, a:visited, a:link {
     color: rgb(156,181,173);
 }
 
-a:hover, button:hover {
+a:hover, button:hover, a.tools:hover, button.tools:hover, #mailOpen:hover {
     color: rgb(65, 80, 69);
+    cursor: pointer;
 }
 
 a.tools, button.tools, span.tools {
@@ -388,6 +389,22 @@ a.tools, button.tools, span.tools {
     border: 1px solid black;
 }
 
+.lightText1 {
+    color: rgb(212, 228, 222);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 220%;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.lightText2 {
+    color: rgb(212, 228, 222);
+    font-family: monospace;
+    font-size: 147%;
+    font-weight: lighter;
+    text-align: left;
+}
+
 .text1 {
     color: rgb(171, 194, 176);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -397,7 +414,7 @@ a.tools, button.tools, span.tools {
 }
 
 .text2 {
-    color: rgb(156,181,173);
+    color: rgb(171, 194, 176);
     font-family: monospace;
     font-size: 147%;
     font-weight: lighter;
