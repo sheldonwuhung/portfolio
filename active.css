@@ -52,7 +52,7 @@
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 20vh;
+        margin-top: 7.5vh;
         margin-bottom: 20vh;  
     
         z-index: 3;
@@ -82,7 +82,7 @@
         position: relative;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 20vh;
+        margin-top: 7.5vh;
         margin-bottom: 20vh;  
     
         z-index: 3;
@@ -285,7 +285,7 @@ button.learnMore {
     text-decoration: none;
 }
 
-button.send {   
+input.send {   
     width: 175px;
     height: 50px;
     background-color: rgb(108, 125, 112);
@@ -301,6 +301,10 @@ button.icon {
     height: 50px;
     background-color: rgb(119, 139, 124);
     border: none;
+}
+
+iframe {
+    display: none;
 }
 
 a.customLink, a:visited, a:link {

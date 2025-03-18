@@ -141,7 +141,7 @@
 
                 <div class="popupGridTop">
                     <div class="popupGridTopElement1">
-                        <div class="text1">Contact Me (Not Working Yet)</div>
+                        <div class="text1">Contact Me</div>
                     </div>
 
                 </div>
@@ -151,23 +151,50 @@
                         <img class="fitIcon round" src="images/TopButtons/close.png" alt="mailCloseButton">
                     </button>
                 </div>
-
                 <div class="popupFormContainer">
-                    <form class="popupForm">
-                        <label class="text2">Your email</label>
-                        <input class="email text2" type="text" placeholder="youremail@email.com" name="email" required>
-                        <label class="text2">Your message</label>
-                        <textarea class="message text2" cols="1" rows="10" placeholder="Tell me something" name="message" required></textarea>
+                    <form id="googleForm" name="googlForm" target="hidden_iframe" onsubmit="submitted=true;" class="popupForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd16kQk-Q6cadff_5M1GrUffNAGL7CEVWfbg-n5eTmLTqOaBA/formResponse?">
+                        <label class="text2" for="entry.140084708">Your email</label>
+                        <input id="entry.140084708" class="email text2" type="text" placeholder="youremail@email.com" name="entry.140084708" required>
+                        <label for="entry.935312899" class="text2">Your message</label>
+                        <textarea id="entry.935312899" class="message text2" cols="1" rows="10" placeholder="Tell me something" name="entry.935312899" required></textarea>
                         <div></div>
-                        <button id="sendEmail" class="send text2" type="button">Send message</button>
+                        <input id="sendEmail" class="send text2" type="submit" name="submit" value="Send message">
                     </form>
+
+                    <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){}">
+
+                    </iframe>
                 </div>
 
             </div>
         </div>
     </div>
 
+    <div id="confirmationDisplay" class="hide popupBackground">
+        <div class="popupContent">
+            <div class="popupGrid">
+
+                <div class="popupGridTop">
+                    <div class="popupGridTopElement1">
+                        <div class="text1">Thank you for your message! Please expect a response within 1 to 2 days.</div>
+                    </div>
+                </div>
+
+                <div class="popupGridClose">
+                    <button id="confirmationClose" class="icon round">
+                        <img class="fitIcon round" src="images/TopButtons/close.png" alt="confirmationCloseButton">
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
     <script src="events.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/JavaScript">
+        var submitted = false;
+    </script>
 </body>
 
 

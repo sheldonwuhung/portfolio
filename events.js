@@ -2,30 +2,40 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const mailOpen = document.getElementById("mailOpen");
     const mailClose = document.getElementById("mailClose");
-    const mailDisplay = document.getElementById("mailSection")
+    const confirmationClose = document.getElementById("confirmationClose");
 
-    const sendEmail = document.getElementById("sendEmail");
+    const mailDisplay = document.getElementById("mailSection")
+    const confirmationDisplay = document.getElementById("confirmationDisplay")
+
+    const form = document.getElementById("googleForm");
 
     const openButtons = [mailOpen];
-    const closeButtons = [mailClose, sendEmail];
-    const projectDisplays = [mailDisplay, mailDisplay];
+    const closeButtons = [mailClose, confirmationClose];
+    const projectDisplays = [mailDisplay, confirmationDisplay];
 
     function togglePopup(element, state) {
         element.classList.toggle(state)
     }
 
-    for (let i=0; i<openButtons.length; i++) {
-        openButtons[i].addEventListener("click", function() {
-            togglePopup(projectDisplays[i], "show");
-        });
+    function hideElement(array) {
+        for (let i=0; i<array.length; i++) {
+            if (array[i] != null) {
+                array[i].addEventListener("click", function() {
+                    togglePopup(projectDisplays[i], "show");
+                    form.reset();
+                });
+            }
+        }
     }
 
-    for (let i=0; i<closeButtons.length; i++) {
-        closeButtons[i].addEventListener("click", function() {
-            togglePopup(projectDisplays[i], "show");
-        });
-    }
+    hideElement(openButtons);
+    hideElement(closeButtons);
 
-    console.log(projectDisplays);
+    form.addEventListener("submit", function() {
+        togglePopup(confirmationDisplay, "show");
+        form.reset();
+        console.log('done');
+    });
+
 });
 
