@@ -152,16 +152,16 @@
                     </button>
                 </div>
                 <div class="popupFormContainer">
-                    <form id="googleForm" name="googlForm" target="hidden_iframe" onsubmit="submitted=true;" class="popupForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd16kQk-Q6cadff_5M1GrUffNAGL7CEVWfbg-n5eTmLTqOaBA/formResponse?">
+                    <form id="googleForm" method="get" target="hidden_iframe" class="popupForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd16kQk-Q6cadff_5M1GrUffNAGL7CEVWfbg-n5eTmLTqOaBA/formResponse?">
                         <label class="text2" for="entry.140084708">Your email</label>
                         <input id="entry.140084708" class="email text2" type="text" placeholder="youremail@email.com" name="entry.140084708" required>
                         <label for="entry.935312899" class="text2">Your message</label>
                         <textarea id="entry.935312899" class="message text2" cols="1" rows="10" placeholder="Tell me something" name="entry.935312899" required></textarea>
                         <div></div>
-                        <input id="sendEmail" class="send text2" type="submit" name="submit" value="Send message">
+                        <input id="sendEmail" class="send text2" type="submit" name="sendEmail" value="Send message">
                     </form>
 
-                    <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){}">
+                    <iframe id="hidden_iframe" src="" name="hidden_iframe" title="gFormWindow" hidden>
 
                     </iframe>
                 </div>
@@ -191,7 +191,11 @@
     </div>
 
     <script src="events.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+    crossorigin="anonymous">
+    </script>
+
     <script type="text/JavaScript">
         var submitted = false;
     </script>
