@@ -8,17 +8,17 @@ const mClose = document.getElementById("mailCloseI");
 const cClose = document.getElementById("confirmationCloseI");
 
 //TOP BUTTON IMAGES
-const limg1 = new Image(); limg1.src = "images/TopButtons/linkedin.png";
-const limg2 = new Image(); limg2.src = "images/TopButtons/lightlinkedin.png";
+const limg1 = new Image(); limg1.src = "images/TopButtons/lightlinkedin.png";
+const limg2 = new Image(); limg2.src = "images/TopButtons/linkedin.png";
 
-const gimg1 = new Image(); gimg1.src = "images/TopButtons/github.png";
-const gimg2 = new Image(); gimg2.src = "images/TopButtons/lightgithub.png";
+const gimg1 = new Image(); gimg1.src = "images/TopButtons/lightgithub.png";
+const gimg2 = new Image(); gimg2.src = "images/TopButtons/github.png";
 
-const mimg1 = new Image(); mimg1.src = "images/TopButtons/mail.png";
-const mimg2 = new Image(); mimg2.src = "images/TopButtons/lightmail.png";
+const mimg1 = new Image(); mimg1.src = "images/TopButtons/lightmail.png";
+const mimg2 = new Image(); mimg2.src = "images/TopButtons/mail.png";
 
-const cimg1 = new Image(); cimg1.src = "images/TopButtons/close.png";
-const cimg2 = new Image(); cimg2.src = "images/TopButtons/lightclose.png";
+const cimg1 = new Image(); cimg1.src = "images/TopButtons/lightclose.png";
+const cimg2 = new Image(); cimg2.src = "images/TopButtons/close.png";
 
 //CLOSE BUTTONS
 const mailClose = document.getElementById("mailClose");
