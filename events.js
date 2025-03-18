@@ -33,6 +33,7 @@ function submitEvent(event) {
     form.submit();
     form.reset();
     togglePopup(confirmationDisplay, "show");
+    togglePopup(mailDisplay, "show");
     console.log('done');
 }
 
