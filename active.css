@@ -314,7 +314,7 @@ div.centerButton {
     border: 0;
 }
 
-.videoWrapper video {
+.videoWrapper * {
     position: absolute;
     width: 100%;
     height: 100%;
