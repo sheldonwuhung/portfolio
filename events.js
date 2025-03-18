@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (array[i] != null) {
                 array[i].addEventListener("click", function() {
                     togglePopup(projectDisplays[i], "show");
+                    form.reset();
                 });
             }
         }
