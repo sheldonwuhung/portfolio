@@ -8,6 +8,7 @@ const mailDisplay = document.getElementById("mailSection")
 const confirmationDisplay = document.getElementById("confirmationDisplay")
 
 const form = document.getElementById("googleForm");
+const iFrame = document.getElementById("hidden_iframe");
 
 const openButtons = [mailOpen];
 const closeButtons = [mailClose, confirmationClose];
@@ -17,20 +18,22 @@ function togglePopup(element, state) {
     element.classList.toggle(state)
 }
 
-function submitEvent(e) {
-    togglePopup(confirmationDisplay, "show");
-    console.log('done');
-}
-
 function hideElement(array) {
     for (let i=0; i<array.length; i++) {
         if (array[i] != null) {
             array[i].addEventListener("click", function() {
                 togglePopup(projectDisplays[i], "show");
-                form.reset();
             });
         }
     }
+}
+
+function submitEvent(event) {
+    event.preventDefault();
+    form.submit();
+    form.reset();
+    togglePopup(confirmationDisplay, "show");
+    console.log('done');
 }
 
 hideElement(openButtons);
