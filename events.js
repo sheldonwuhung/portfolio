@@ -7,6 +7,8 @@ const mailOpen = document.getElementById("mailOpenI");
 const mClose = document.getElementById("mailCloseI");
 const cClose = document.getElementById("confirmationCloseI");
 
+let b0 = document.body[0];
+
 //TOP BUTTON IMAGES
 const limg1 = new Image(); limg1.src = "images/TopButtons/lightlinkedin.png";
 const limg2 = new Image(); limg2.src = "images/TopButtons/linkedin.png";
@@ -51,6 +53,7 @@ function submitEvent(event) {
     togglePopup(confirmationDisplay, "show");
     togglePopup(mailDisplay, "show");
     console.log('done');
+    console.log(b0)
 }
 
 function hideElement(array) {
