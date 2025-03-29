@@ -266,18 +266,18 @@ div.popupBackground {
 div.popupGrid {
     display: grid;
     grid-template-columns: 10fr 1fr;
-}
 
-div.popupGridTop {
-    padding: 16px;
-    padding-left: 20px;
-    grid-row: 1;
-}
-
-div.popupGridClose {
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+    div.popupGridTop {
+        padding: 16px;
+        padding-left: 20px;
+        grid-row: 1;
+    }
+    
+    div.popupGridClose {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 div.popupFormContainer {
