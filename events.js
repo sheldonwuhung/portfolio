@@ -1,4 +1,26 @@
 // document.addEventListener("DOMContentLoaded", function() {
+//
+let width = window.innerWidth;
+let height = window.innerHeight;
+let change = false;
+let change650 = false;
+let htmlLoaded = false;
+
+//NAV BUTTONS
+const aboutMeButton = document.getElementById("AboutMe");
+const projectButton = document.getElementById("Projects");
+const contactButton = document.getElementById("ContactMe");
+const menuButton = document.getElementById("Menu");
+const menuButtonImage = menuButton.querySelector("img");
+
+//DROPDOWN BUTTONS
+const aboutMeButtonD = document.getElementById("AboutMeD");
+const projectButtonD = document.getElementById("ProjectsD");
+const contactButtonD = document.getElementById("ContactMeD");
+
+//ABOUT ME DOWN ARROW
+const downArrow = document.getElementById("downArrow");
+const circles = document.getElementById("circles");
 
 //TOP BUTTONS
 const linkedinOpen = document.getElementById("linkedinOpen");
@@ -22,13 +44,20 @@ const mimg2 = new Image(); mimg2.src = "images/TopButtons/mail.png";
 const cimg1 = new Image(); cimg1.src = "images/TopButtons/lightclose.png";
 const cimg2 = new Image(); cimg2.src = "images/TopButtons/close.png";
 
+const meimg1 = new Image(); meimg1.src = "images/Navbar/lightMenu.png";
+const meimg2 = new Image(); meimg2.src = "images/Navbar/Menu.png";
+
+const moeimg1 = new Image(); moeimg1.src = "images/Navbar/lightMenuOpen.png";
+const moeimg2 = new Image(); moeimg2.src = "images/Navbar/MenuOpen.png";
+
 //CLOSE BUTTONS
 const mailClose = document.getElementById("mailClose");
 const confirmationClose = document.getElementById("confirmationClose");
 
 //OTHER DISPLAY LAYERS
-const mailDisplay = document.getElementById("mailSection")
-const confirmationDisplay = document.getElementById("confirmationDisplay")
+const mailDisplay = document.getElementById("mailSection");
+const confirmationDisplay = document.getElementById("confirmationDisplay");
+const menuDropdownDisplay = document.getElementById("menuDropdown");
 
 //FORM
 const form = document.getElementById("googleForm");
@@ -36,14 +65,73 @@ const iFrame = document.getElementById("hidden_iframe");
 
 //ARRAYS
 const imageChangeButtons = [linkedinOpen, githubOpen, mailOpen, mClose, cClose];
-const normalImages = [limg1, gimg1, mimg1, cimg1, cimg1];
-const lightImages = [limg2, gimg2, mimg2, cimg2, cimg2];
+const normalImages = [limg1, gimg1, mimg1, cimg1, cimg1, meimg1, moeimg1];
+const lightImages = [limg2, gimg2, mimg2, cimg2, cimg2, meimg2, moeimg2];
 
-const openButtons = [mailOpen];
-const closeButtons = [mailClose, confirmationClose];
-const projectDisplays = [mailDisplay, confirmationDisplay];
+const positionChangeButtons = [aboutMeButton, aboutMeButtonD, projectButton, projectButtonD, downArrow];
+const openButtons = [mailOpen, contactButton, contactButtonD, null, menuButton];
+const closeButtons = [mailClose, null, null, confirmationClose, null];
+const projectDisplays = [mailDisplay, mailDisplay, mailDisplay, confirmationDisplay, null];
+const navButtons = [aboutMeButton, projectButton, contactButton];
 
-function togglePopup(element, state) {element.classList.toggle(state)}
+function togglePopup(element, state) {element.classList.toggle(state);}
+function toggleMenu(action) {
+    for (const button of navButtons) {togglePopup(button, action); console.log(button);}
+}
+function toggleMenuImage() {
+    if (menuButtonImage.src==moeimg1.src) {
+        menuButtonImage.src=meimg1.src;
+        if (menuDropdownDisplay.classList.contains("slide-in")) {
+            menuDropdownDisplay.classList.remove("slide-in");
+            menuDropdownDisplay.classList.add("slide-out")
+        }
+    }
+    else if (menuButtonImage.src==meimg1.src) {
+        menuButtonImage.src=moeimg1.src;
+        if (menuDropdownDisplay.classList.contains("slide-out")) {
+            menuDropdownDisplay.classList.remove("slide-out");
+            menuDropdownDisplay.classList.add("slide-in")
+        }}
+    else if (menuButtonImage.src==moeimg2.src) {menuButtonImage.src=meimg2.src;}
+    else if (menuButtonImage.src==meimg2.src) {menuButtonImage.src=moeimg2.src;}
+}
+function changeMenuBasedOnDimensions() {
+    const navShow = aboutMeButton.classList.contains("show");
+    const menuShow = menuDropdownDisplay.classList.contains("show");
+    const circlesShow = circles.classList.contains("show");
+
+    width = window.innerWidth;
+    height = window.innerHeight;
+    console.log(menuDropdownDisplay.classList);
+
+    if (change650 & !circlesShow & width>650) {
+        change650 = false;
+        circles.classList.add("show");
+    }
+    else if (!change650 & circlesShow & width<=650) {
+        change650 = true;
+        circles.classList.remove("show");
+    }
+
+    if (change & width>770) {
+        change = false;
+        if (!navShow) {
+            for (const button of navButtons) {button.classList.add("show");}
+        }
+        if (menuShow) {menuDropdownDisplay.classList.remove("show");}
+        menuButtonImage.src = moeimg1.src;
+    }
+    else if (!change & width<=770) {
+        change = true;
+        if (navShow) {
+            for (const button of navButtons) {button.classList.remove("show");}
+        }
+
+        menuButtonImage.src = meimg1.src;
+    }
+
+}
+
 function mouseHoverChangeImage(element, img) {element.src = img.src;}
 
 function submitEvent(event) {
@@ -53,37 +141,63 @@ function submitEvent(event) {
     togglePopup(confirmationDisplay, "show");
     togglePopup(mailDisplay, "show");
     console.log('done');
-    console.log(b0)
 }
 
-function hideElement(array) {
+function moveToPosition(element) {
+    if (element==aboutMeButton || element==aboutMeButtonD) {window.scrollTo(0, 0);}
+    else if (element==projectButton || element==projectButtonD || element==downArrow) {window.scrollTo(0, 940);}
+}
+
+function loaded() {
+    htmlLoaded = true;
+    changeMenuBasedOnDimensions();
+    if (change) {
+        menuDropdownDisplay.classList.remove("show");
+    }
+}
+
+function addEvents(array, action) {
     for (let i=0; i<array.length; i++) {
-        if (array[i] != null) {
-            array[i].addEventListener("click", function() {
-                togglePopup(projectDisplays[i], "show");
-            });
+        if (array[i]!=null) {
+
+            if (action=="addImg") {
+                array[i].addEventListener("mouseover", function() {
+                    mouseHoverChangeImage(array[i], lightImages[i]);
+                });
+                array[i].addEventListener("mouseout", function() {
+                    mouseHoverChangeImage(array[i], normalImages[i]);
+                });
+            }
+            else if (action=="hideElement") {
+                array[i].addEventListener("click", function() {
+                    if (array[i]!=menuButton) {
+                        togglePopup(projectDisplays[i], "show");
+                    }
+                    else {
+                        toggleMenuImage();
+                        if (!change) {toggleMenu("show");}
+                        else {togglePopup(menuDropdownDisplay, "show");}
+                    }
+                });
+            }
+            else if (action=="changePosition") {
+                array[i].addEventListener("click", function() {
+                    moveToPosition(array[i]);
+                });
+            }
+            
         }
     }
 }
 
-function addImgChangeEvents(array) {
-    for (let i=0; i<array.length; i++) {
-        if (array[i] != null) {
-            array[i].addEventListener("mouseover", function() {
-                mouseHoverChangeImage(array[i], lightImages[i]);
-            });
-            array[i].addEventListener("mouseout", function() {
-                mouseHoverChangeImage(array[i], normalImages[i]);
-            });
-        }
-    }
-}
-
-hideElement(openButtons);
-hideElement(closeButtons);
-addImgChangeEvents(imageChangeButtons);
+addEvents(openButtons, "hideElement");
+addEvents(closeButtons, "hideElement");
+addEvents(imageChangeButtons, "addImg");
+addEvents(positionChangeButtons, "changePosition");
 
 form.addEventListener("submit", submitEvent);
+window.addEventListener("resize", changeMenuBasedOnDimensions);
+document.addEventListener("DOMContentLoaded", loaded)
 
 // });
 
