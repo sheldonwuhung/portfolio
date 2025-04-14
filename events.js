@@ -29,7 +29,12 @@ const mailOpen = document.getElementById("mailOpenI");
 const mClose = document.getElementById("mailCloseI");
 const cClose = document.getElementById("confirmationCloseI");
 
-let b0 = document.body[0];
+//IMAGE OF ME
+const imageOfMe = document.getElementById("imgOfMe");
+const iom1 = new Image(); iom1.src = "images/AboutMe/Me1Down.png"
+const iom2 = new Image(); iom2.src = "images/AboutMe/Me2Down.png"
+const iom3 = new Image(); iom3.src = "images/AboutMe/Me3Down.png"
+let iomIndex = 1; //second element
 
 //TOP BUTTON IMAGES
 const limg1 = new Image(); limg1.src = "images/TopButtons/lightlinkedin.png";
@@ -64,6 +69,7 @@ const form = document.getElementById("googleForm");
 const iFrame = document.getElementById("hidden_iframe");
 
 //ARRAYS
+const iomCycle = [iom1, iom2, iom3];
 const imageChangeButtons = [linkedinOpen, githubOpen, mailOpen, mClose, cClose];
 const normalImages = [limg1, gimg1, mimg1, cimg1, cimg1, meimg1, moeimg1];
 const lightImages = [limg2, gimg2, mimg2, cimg2, cimg2, meimg2, moeimg2];
@@ -95,6 +101,14 @@ function toggleMenuImage() {
     else if (menuButtonImage.src==moeimg2.src) {menuButtonImage.src=meimg2.src;}
     else if (menuButtonImage.src==meimg2.src) {menuButtonImage.src=moeimg2.src;}
 }
+
+function toggleImageOfMe() {
+    if (iomIndex>iomCycle.length-1) {iomIndex = 0;}
+    imageOfMe.src = iomCycle[iomIndex++].src;
+
+}
+
+
 function changeMenuBasedOnDimensions() {
     const navShow = aboutMeButton.classList.contains("show");
     const menuShow = menuDropdownDisplay.classList.contains("show");
@@ -183,6 +197,11 @@ function addEvents(array, action) {
                     moveToPosition(array[i]);
                 });
             }
+            else if (action=="iomCycle") {
+                array[i].addEventListener("click", function() {
+                    toggleImageOfMe();
+                });
+            }
             
         }
     }
@@ -192,6 +211,7 @@ addEvents(openButtons, "hideElement");
 addEvents(closeButtons, "hideElement");
 addEvents(imageChangeButtons, "addImg");
 addEvents(positionChangeButtons, "changePosition");
+addEvents([imageOfMe], "iomCycle");
 
 form.addEventListener("submit", submitEvent);
 window.addEventListener("resize", changeMenuBasedOnDimensions);
