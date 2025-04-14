@@ -151,9 +151,7 @@ function moveToPosition(element) {
 function loaded() {
     htmlLoaded = true;
     changeMenuBasedOnDimensions();
-    if (change) {
-        menuDropdownDisplay.classList.remove("show");
-    }
+    menuDropdownDisplay.classList.remove("show");
 }
 
 function addEvents(array, action) {
