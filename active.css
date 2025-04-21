@@ -16,7 +16,7 @@
     animation: slide-outa 0.5 forwards;
 } */
 
-@media only screen and (max-width: 1920px) {
+@media only screen and (max-width: 7680px) {
     .lightText1 {
         color: rgb(212, 228, 222);
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
