@@ -69,7 +69,7 @@ const form = document.getElementById("googleForm");
 const iFrame = document.getElementById("hidden_iframe");
 
 //ARRAYS
-const iomCycle = [iom1, iom2, iom3];
+const iomCycle = [iom3, iom2, iom1];
 const imageChangeButtons = [linkedinOpen, githubOpen, mailOpen, mClose, cClose];
 const normalImages = [limg1, gimg1, mimg1, cimg1, cimg1, meimg1, moeimg1];
 const lightImages = [limg2, gimg2, mimg2, cimg2, cimg2, meimg2, moeimg2];
