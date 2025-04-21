@@ -599,7 +599,7 @@
     div.mainBody {
         text-align: left;
         max-width: 75vw;
-        min-width: 322px;
+        min-width: 300px;
         background-color: rgb(65, 80, 69);
     }
     
@@ -673,7 +673,13 @@
 }
 
 @media only screen and (max-width: 388px) {
+    
     div.navbar {
+
+        div.navGrid {
+            grid-template-columns: 75% 25%;
+        }
+
         #navImage {
             width: 42px;
             height: 42px;
