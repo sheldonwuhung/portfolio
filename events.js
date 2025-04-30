@@ -1,5 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//
+//MAIIN PROPERTIES
 let width = window.innerWidth;
 let height = window.innerHeight;
 let change = false;
@@ -82,7 +81,7 @@ const navButtons = [aboutMeButton, projectButton, contactButton];
 
 function togglePopup(element, state) {element.classList.toggle(state);}
 function toggleMenu(action) {
-    for (const button of navButtons) {togglePopup(button, action); console.log(button);}
+    for (const button of navButtons) {togglePopup(button, action);}
 }
 function toggleMenuImage() {
     if (menuButtonImage.src==moeimg1.src) {
@@ -108,7 +107,6 @@ function toggleImageOfMe() {
 
 }
 
-
 function changeMenuBasedOnDimensions() {
     const navShow = aboutMeButton.classList.contains("show");
     const menuShow = menuDropdownDisplay.classList.contains("show");
@@ -116,7 +114,6 @@ function changeMenuBasedOnDimensions() {
 
     width = window.innerWidth;
     height = window.innerHeight;
-    console.log(menuDropdownDisplay.classList);
 
     if (change650 & !circlesShow & width>650) {
         change650 = false;
@@ -216,6 +213,4 @@ addEvents([imageOfMe], "iomCycle");
 form.addEventListener("submit", submitEvent);
 window.addEventListener("resize", changeMenuBasedOnDimensions);
 document.addEventListener("DOMContentLoaded", loaded)
-
-// });
 
