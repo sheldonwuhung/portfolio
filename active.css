@@ -33,7 +33,7 @@
         text-align: left;
     }
 
-    div.menuDropdown {
+    nav.menuDropdown {
         position: fixed;
         top: 0px;
         left: 0px;
@@ -53,7 +53,7 @@
         ;
     }
 
-    div.navbar {
+    nav.navbar {
         position: fixed;
         top: 0px;
         left: 0px;
@@ -242,7 +242,7 @@
         text-align: left;
     }
 
-    div.menuDropdown {
+    nav.menuDropdown {
         position: fixed;
         top: 0px;
         left: 0px;
@@ -262,7 +262,7 @@
         ;
     }
 
-    div.navbar {
+    nav.navbar {
         position: fixed;
         top: 0px;
         left: 0px;
@@ -544,7 +544,7 @@
 
 @media only screen and (max-width: 770px) {
     
-    div.navbar {
+    nav.navbar {
         div.navGrid {
             grid-template-columns: 80% 20%;
         }
@@ -666,7 +666,7 @@
         width: 50px;
         height: 50px;
     }
-    div.navbar {
+    nav.navbar {
         .lightText1 {
             font-size: 170%;
         }
@@ -690,7 +690,7 @@
 
 @media only screen and (max-width: 388px) {
     
-    div.navbar {
+    nav.navbar {
 
         div.navGrid {
             grid-template-columns: 75% 25%;
@@ -712,11 +712,11 @@
     }
 }
 
-div.hide, button.hide {
+nav.hide, div.hide, button.hide {
     visibility: hidden;
 }
 
-div.show, button.show {
+nav.show, div.show, button.show {
     visibility: visible;
 }
 
