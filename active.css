@@ -112,7 +112,7 @@
         text-align: left;
         max-width: 1600px;
         min-width: 1600px;
-        background-color: rgb(65, 80, 69);
+        /* background-color: rgb(65, 80, 69); */
     }
 
     div.grid1 {
@@ -158,6 +158,7 @@
                 div.text2 {
                     font-size: 210%;
                 }
+
             }
 
             div.circles * {
@@ -321,7 +322,7 @@
         text-align: left;
         max-width: 1300px;
         min-width: 1300px;
-        background-color: rgb(65, 80, 69);
+        /* background-color: rgb(65, 80, 69); */
     }
 
     div.grid1 {
@@ -616,7 +617,7 @@
         text-align: left;
         max-width: 75vw;
         min-width: 300px;
-        background-color: rgb(65, 80, 69);
+        /* background-color: rgb(65, 80, 69); */
     }
     
     div.grid2 {
@@ -779,6 +780,7 @@ div.centerButton {
 
 body {
     background-color: rgb(65, 80, 69);
+    background-image: url("images/h2.png");
     z-index: 1;
 }
 
