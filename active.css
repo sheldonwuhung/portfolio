@@ -17,6 +17,7 @@
 } */
 
 @media only screen and (max-width: 2560px) {
+
     .lightText1 {
         color: rgb(212, 228, 222);
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -227,6 +228,7 @@
 }
 
 @media only screen and (max-width: 1920px) {
+
     .lightText1 {
         color: rgb(212, 228, 222);
         font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -780,6 +782,7 @@ div.centerButton {
 
 body {
     background-color: rgb(65, 80, 69);
+    background-size: contain;
     background-image: url("images/h2.png");
     z-index: 1;
 }
