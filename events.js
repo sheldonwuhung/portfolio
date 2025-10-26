@@ -8,6 +8,7 @@ let htmlLoaded = false;
 //NAV BUTTONS
 const aboutMeButton = document.getElementById("AboutMe");
 const projectButton = document.getElementById("Projects");
+const graphicsButton = document.getElementById("Graphics");
 const contactButton = document.getElementById("ContactMe");
 const menuButton = document.getElementById("Menu");
 const menuButtonImage = menuButton.querySelector("img");
@@ -15,7 +16,14 @@ const menuButtonImage = menuButton.querySelector("img");
 //DROPDOWN BUTTONS
 const aboutMeButtonD = document.getElementById("AboutMeD");
 const projectButtonD = document.getElementById("ProjectsD");
+const graphicsButtonD = document.getElementById("GraphicsD");
 const contactButtonD = document.getElementById("ContactMeD");
+
+
+//HEADER LOCATIONS
+const section1Header = document.getElementById("Section1");
+const section2Header = document.getElementById("Section2");
+const section3Header = document.getElementById("Section3");
 
 //ABOUT ME DOWN ARROW
 const downArrow = document.getElementById("downArrow");
@@ -73,11 +81,11 @@ const imageChangeButtons = [linkedinOpen, githubOpen, mailOpen, mClose, cClose];
 const normalImages = [limg1, gimg1, mimg1, cimg1, cimg1, meimg1, moeimg1];
 const lightImages = [limg2, gimg2, mimg2, cimg2, cimg2, meimg2, moeimg2];
 
-const positionChangeButtons = [aboutMeButton, aboutMeButtonD, projectButton, projectButtonD, downArrow];
+const positionChangeButtons = [aboutMeButton, aboutMeButtonD, projectButton, projectButtonD, graphicsButton, graphicsButtonD, downArrow];
 const openButtons = [mailOpen, contactButton, contactButtonD, null, menuButton];
 const closeButtons = [mailClose, null, null, confirmationClose, null];
 const projectDisplays = [mailDisplay, mailDisplay, mailDisplay, confirmationDisplay, null];
-const navButtons = [aboutMeButton, projectButton, contactButton];
+const navButtons = [aboutMeButton, projectButton, graphicsButton, contactButton];
 
 function togglePopup(element, state) {element.classList.toggle(state);}
 function toggleMenu(action) {
@@ -155,8 +163,19 @@ function submitEvent(event) {
 }
 
 function moveToPosition(element) {
-    if (element==aboutMeButton || element==aboutMeButtonD) {window.scrollTo(0, 0);}
-    else if (element==projectButton || element==projectButtonD || element==downArrow) {window.scrollTo(0, 940);}
+
+    let y = 0;
+    let sectionRect = null;
+
+    if (element==aboutMeButton || element==aboutMeButtonD) sectionRect = section1Header.getBoundingClientRect();
+    else if (element==projectButton || element==projectButtonD || element==downArrow) sectionRect = section2Header.getBoundingClientRect();
+    else if (element==graphicsButton || element==graphicsButtonD) sectionRect = section3Header.getBoundingClientRect();
+
+    if (sectionRect != null) {
+        y = sectionRect.top + window.scrollY - 100;
+        window.scrollTo(0, y);
+    }
+
 }
 
 function loaded() {
