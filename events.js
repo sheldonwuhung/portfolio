@@ -30,12 +30,18 @@ const downArrow = document.getElementById("downArrow");
 const circles = document.getElementById("circles");
 
 //TOP BUTTONS
-const linkedinOpen = document.getElementById("linkedinOpen");
-const githubOpen = document.getElementById("githubOpen");
+const linkedinOpen1 = document.getElementById("linkedinOpen1");
+const linkedinOpen2 = document.getElementById("linkedinOpen2");
+const githubOpen1 = document.getElementById("githubOpen1");
+const githubOpen2 = document.getElementById("githubOpen2");
+const robloxOpen1 = document.getElementById("robloxOpen1");
+const robloxOpen2 = document.getElementById("robloxOpen2");
 const mailOpen = document.getElementById("mailOpenI");
 const mClose = document.getElementById("mailCloseI");
-const esaOpen = document.getElementById("esaOpen");
-const badmintonOpen = document.getElementById("badmintonOpen");
+const esaOpen1 = document.getElementById("esaOpen1");
+const esaOpen2 = document.getElementById("esaOpen2");
+const badmintonOpen1 = document.getElementById("badmintonOpen1");
+const badmintonOpen2 = document.getElementById("badmintonOpen2");
 const cClose = document.getElementById("confirmationCloseI");
 
 //IMAGE OF ME
@@ -70,6 +76,9 @@ const esaimg2 = new Image(); esaimg2.src = "images/TopButtons/esa.png";
 const badimg1 = new Image(); badimg1.src = "images/TopButtons/lightbadminton.png";
 const badimg2 = new Image(); badimg2.src = "images/TopButtons/badminton.png";
 
+const robloximg1 = new Image(); robloximg1.src = "images/TopButtons/lightroblox.png";
+const robloximg2 = new Image(); robloximg2.src = "images/TopButtons/roblox.png";
+
 //CLOSE BUTTONS
 const mailClose = document.getElementById("mailClose");
 const confirmationClose = document.getElementById("confirmationClose");
@@ -85,9 +94,9 @@ const iFrame = document.getElementById("hidden_iframe");
 
 //ARRAYS
 const iomCycle = [iom3, iom2, iom1];
-const imageChangeButtons = [linkedinOpen, githubOpen, mailOpen, mClose, cClose, esaOpen, badmintonOpen];
-const normalImages = [limg1, gimg1, mimg1, cimg1, cimg1, esaimg1, badimg1, meimg1, moeimg1];
-const lightImages = [limg2, gimg2, mimg2, cimg2, cimg2, esaimg2, badimg2, meimg2, moeimg2];
+const imageChangeButtons = [linkedinOpen1, linkedinOpen2, githubOpen1, githubOpen2, mailOpen, mClose, cClose, esaOpen1, esaOpen2, badmintonOpen1, badmintonOpen2, robloxOpen1, robloxOpen2];
+const normalImages = [limg1, limg1, gimg1, gimg1, mimg1, cimg1, cimg1, esaimg1, esaimg1, badimg1, badimg1, robloximg1, robloximg1, meimg1, moeimg1];
+const lightImages = [limg2, limg2, gimg2, gimg2, mimg2, cimg2, cimg2, esaimg2, esaimg2, badimg2, badimg2, robloximg2, robloximg2, meimg2, moeimg2];
 
 const positionChangeButtons = [aboutMeButton, aboutMeButtonD, projectButton, projectButtonD, graphicsButton, graphicsButtonD, downArrow];
 const openButtons = [mailOpen, contactButton, contactButtonD, null, menuButton];

@@ -933,7 +933,18 @@ html {
     scroll-behavior: smooth;
 }
 
-#Section3 {
-    display: flex;
-    gap: .5%;
+#Section2, #Section3 {
+    display: grid;
+
+    grid-template-columns: 65% 35%;
+
+    /* * {border: 5px solid black;} */
+
+    div.section-grid {
+
+        justify-content: right;
+        display: flex;
+
+        gap: 2%;
+    }
 }
