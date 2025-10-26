@@ -933,3 +933,7 @@ html {
     scroll-behavior: smooth;
 }
 
+#Section3 {
+    display: flex;
+    gap: .5%;
+}

@@ -34,6 +34,8 @@ const linkedinOpen = document.getElementById("linkedinOpen");
 const githubOpen = document.getElementById("githubOpen");
 const mailOpen = document.getElementById("mailOpenI");
 const mClose = document.getElementById("mailCloseI");
+const esaOpen = document.getElementById("esaOpen");
+const badmintonOpen = document.getElementById("badmintonOpen");
 const cClose = document.getElementById("confirmationCloseI");
 
 //IMAGE OF ME
@@ -62,6 +64,12 @@ const meimg2 = new Image(); meimg2.src = "images/Navbar/Menu.png";
 const moeimg1 = new Image(); moeimg1.src = "images/Navbar/lightMenuOpen.png";
 const moeimg2 = new Image(); moeimg2.src = "images/Navbar/MenuOpen.png";
 
+const esaimg1 = new Image(); esaimg1.src = "images/TopButtons/lightesa.png";
+const esaimg2 = new Image(); esaimg2.src = "images/TopButtons/esa.png";
+
+const badimg1 = new Image(); badimg1.src = "images/TopButtons/lightbadminton.png";
+const badimg2 = new Image(); badimg2.src = "images/TopButtons/badminton.png";
+
 //CLOSE BUTTONS
 const mailClose = document.getElementById("mailClose");
 const confirmationClose = document.getElementById("confirmationClose");
@@ -77,9 +85,9 @@ const iFrame = document.getElementById("hidden_iframe");
 
 //ARRAYS
 const iomCycle = [iom3, iom2, iom1];
-const imageChangeButtons = [linkedinOpen, githubOpen, mailOpen, mClose, cClose];
-const normalImages = [limg1, gimg1, mimg1, cimg1, cimg1, meimg1, moeimg1];
-const lightImages = [limg2, gimg2, mimg2, cimg2, cimg2, meimg2, moeimg2];
+const imageChangeButtons = [linkedinOpen, githubOpen, mailOpen, mClose, cClose, esaOpen, badmintonOpen];
+const normalImages = [limg1, gimg1, mimg1, cimg1, cimg1, esaimg1, badimg1, meimg1, moeimg1];
+const lightImages = [limg2, gimg2, mimg2, cimg2, cimg2, esaimg2, badimg2, meimg2, moeimg2];
 
 const positionChangeButtons = [aboutMeButton, aboutMeButtonD, projectButton, projectButtonD, graphicsButton, graphicsButtonD, downArrow];
 const openButtons = [mailOpen, contactButton, contactButtonD, null, menuButton];
