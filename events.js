@@ -7,16 +7,20 @@ let htmlLoaded = false;
 
 //NAV BUTTONS
 const aboutMeButton = document.getElementById("AboutMe");
-const projectButton = document.getElementById("Projects");
 const graphicsButton = document.getElementById("Graphics");
+const websitesButton = document.getElementById("Web");
+const threeDButton = document.getElementById("3D");
+const gamesButton = document.getElementById("Games");
 const contactButton = document.getElementById("ContactMe");
 const menuButton = document.getElementById("Menu");
 const menuButtonImage = menuButton.querySelector("img");
 
 //DROPDOWN BUTTONS
 const aboutMeButtonD = document.getElementById("AboutMeD");
-const projectButtonD = document.getElementById("ProjectsD");
 const graphicsButtonD = document.getElementById("GraphicsD");
+const websitesButtonD = document.getElementById("WebD");
+const threeDButtonD = document.getElementById("3DD");
+const gamesButtonD = document.getElementById("GamesD");
 const contactButtonD = document.getElementById("ContactMeD");
 
 
@@ -24,6 +28,8 @@ const contactButtonD = document.getElementById("ContactMeD");
 const section1Header = document.getElementById("Section1");
 const section2Header = document.getElementById("Section2");
 const section3Header = document.getElementById("Section3");
+const section4Header = document.getElementById("Section4");
+const section5Header = document.getElementById("Section5");
 
 //ABOUT ME DOWN ARROW
 const downArrow = document.getElementById("downArrow");
@@ -98,11 +104,11 @@ const imageChangeButtons = [linkedinOpen1, linkedinOpen2, githubOpen1, githubOpe
 const normalImages = [limg1, limg1, gimg1, gimg1, mimg1, cimg1, cimg1, esaimg1, esaimg1, badimg1, badimg1, robloximg1, robloximg1, meimg1, moeimg1];
 const lightImages = [limg2, limg2, gimg2, gimg2, mimg2, cimg2, cimg2, esaimg2, esaimg2, badimg2, badimg2, robloximg2, robloximg2, meimg2, moeimg2];
 
-const positionChangeButtons = [aboutMeButton, aboutMeButtonD, projectButton, projectButtonD, graphicsButton, graphicsButtonD, downArrow];
+const positionChangeButtons = [aboutMeButton, aboutMeButtonD, graphicsButton, graphicsButtonD, websitesButton, websitesButtonD, threeDButton, threeDButtonD, gamesButton, gamesButtonD, downArrow];
 const openButtons = [mailOpen, contactButton, contactButtonD, null, menuButton];
 const closeButtons = [mailClose, null, null, confirmationClose, null];
 const projectDisplays = [mailDisplay, mailDisplay, mailDisplay, confirmationDisplay, null];
-const navButtons = [aboutMeButton, projectButton, graphicsButton, contactButton];
+const navButtons = [aboutMeButton, graphicsButton, websitesButton, threeDButton, gamesButton, contactButton];
 
 function togglePopup(element, state) {element.classList.toggle(state);}
 function toggleMenu(action) {
@@ -149,7 +155,7 @@ function changeMenuBasedOnDimensions() {
         circles.classList.remove("show");
     }
 
-    if (change & width>770) {
+    if (change & width>950) {
         change = false;
         if (!navShow) {
             for (const button of navButtons) {button.classList.add("show");}
@@ -157,7 +163,7 @@ function changeMenuBasedOnDimensions() {
         if (menuShow) {menuDropdownDisplay.classList.remove("show");}
         menuButtonImage.src = moeimg1.src;
     }
-    else if (!change & width<=770) {
+    else if (!change & width<=950) {
         change = true;
         if (navShow) {
             for (const button of navButtons) {button.classList.remove("show");}
@@ -185,8 +191,10 @@ function moveToPosition(element) {
     let sectionRect = null;
 
     if (element==aboutMeButton || element==aboutMeButtonD) sectionRect = section1Header.getBoundingClientRect();
-    else if (element==projectButton || element==projectButtonD || element==downArrow) sectionRect = section2Header.getBoundingClientRect();
-    else if (element==graphicsButton || element==graphicsButtonD) sectionRect = section3Header.getBoundingClientRect();
+    else if (element==graphicsButton || element==graphicsButtonD || element==downArrow) sectionRect = section2Header.getBoundingClientRect();
+    else if (element==websitesButton || element==websitesButtonD) sectionRect = section3Header.getBoundingClientRect();
+    else if (element==threeDButton || element==threeDButtonD) sectionRect = section4Header.getBoundingClientRect();
+    else if (element==gamesButton || element==gamesButtonD) sectionRect = section5Header.getBoundingClientRect();
 
     if (sectionRect != null) {
         y = sectionRect.top + window.scrollY - 100;
